@@ -1,5 +1,3 @@
-Ally: Your friend in an emergency.
-
 # Ally: Your Friend in an Emergency
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) **Ally is a mobile application designed to be your reliable companion during emergencies, helping you quickly connect to help when you need it most.**
