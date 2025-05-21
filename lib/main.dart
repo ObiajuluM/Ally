@@ -17,7 +17,8 @@ class MainApp extends StatelessWidget {
             color: Colors.blue,
             child: Text(
               'Welcome to Safety Ally',
-              style: GoogleFonts.josefinSans(
+              
+              style: GoogleFonts.varelaRound(
                 fontSize: 50,
               ),
             ),
