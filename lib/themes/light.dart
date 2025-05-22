@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.blue,
+      seedColor: Colors.green,
       brightness: Brightness.light,
     ),
 
@@ -27,7 +27,7 @@ ThemeData lightTheme = ThemeData(
         TargetPlatform.android: PredictiveBackPageTransitionsBuilder(),
         TargetPlatform.iOS: FadePageTransitionsBuilder(),
       },
-    )
+    ),
 
     ///
     // inputDecorationTheme: InputDecorationTheme(

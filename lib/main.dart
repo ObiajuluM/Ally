@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:ally/pages/home/home.dart';
 import 'package:ally/pages/primary/primary.dart';
+import 'package:ally/themes/dark.dart';
 import 'package:ally/themes/light.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -30,7 +31,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: lightTheme,
-      darkTheme: lightTheme,
+      darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       home: PrimaryPage(),
     );

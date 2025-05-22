@@ -57,6 +57,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            // for (int i = 0; i < 10; i++)
             _buildCheckboxTile(
               label: 'Safety Check',
               value: true,
