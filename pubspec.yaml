@@ -9,7 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_riverpod: ^2.6.1
   google_fonts: ^6.2.1
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -19,3 +21,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/
+
+  fonts:
+    - family: VarelaRound
+      fonts:
+        - asset: assets/fonts/VarelaRound/VarelaRound-Regular.ttf
+          weight: 400
+

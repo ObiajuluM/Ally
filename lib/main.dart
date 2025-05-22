@@ -5,6 +5,7 @@ void main() {
   runApp(const MainApp());
 }
 
+// todo: add predicitve back for android here and the fade for ios
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -17,9 +18,8 @@ class MainApp extends StatelessWidget {
             color: Colors.blue,
             child: Text(
               'Welcome to Safety Ally',
-              
-              style: GoogleFonts.varelaRound(
-                fontSize: 50,
+              style: TextStyle(
+                fontSize: 24,
               ),
             ),
           ),
