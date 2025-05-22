@@ -1,12 +1,14 @@
 import 'package:ally/pages/actions/actions.dart';
+import 'package:ally/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 //TODO: i may have to move the eemergency sharing and call 199 buttons down so they are easily accessed on one tap, ask AI
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
@@ -17,11 +19,16 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Get help fast',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            GestureDetector(
+              onTap: () {
+                ref.read(themeModeProvider.notifier).changeTheme();
+              },
+              child: const Text(
+                'Get help fast',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -87,6 +94,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       onPressed: onPressed,
+      onLongPress: () {},
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
