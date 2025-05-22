@@ -1,5 +1,6 @@
 import 'package:ally/pages/actions/actions.dart';
 import 'package:ally/pages/home/home.dart';
+import 'package:ally/pages/me/me.dart';
 import 'package:ally/pages/primary/providers/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -36,7 +37,7 @@ class _PrimaryPageState extends ConsumerState<PrimaryPage> {
         itemBuilder: ((context, index) => const [
               HomePage(),
               ActionsPage(),
-              HomePage(),
+              MePage(),
             ].elementAt(index)),
       ),
 

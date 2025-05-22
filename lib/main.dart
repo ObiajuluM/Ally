@@ -11,7 +11,6 @@ import 'package:google_fonts/google_fonts.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-
   // set high refresh rate for android, add an option to drop this to the lowest
   if (Platform.isAndroid) {
     await FlutterDisplayMode.setHighRefreshRate();
@@ -33,6 +32,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: lightTheme,
       darkTheme: lightTheme,
+      debugShowCheckedModeBanner: false,
       home: PrimaryPage(),
     );
   }
