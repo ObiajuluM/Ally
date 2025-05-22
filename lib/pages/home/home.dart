@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//TODO: i may have to move the eemergency sharing and call 199 buttons down so they are easily accessed on one tap, ask AI
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -11,57 +12,54 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-      
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Get help fast',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Get help fast',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
-              const SizedBox(height: 20),
-              _buildEmergencyButton(
-                context,
-                icon: Icons.share,
-                label: 'Emergency Sharing',
-                onPressed: () {
-                  // Handle emergency sharing
-                },
+            ),
+            const SizedBox(height: 20),
+            _buildEmergencyButton(
+              context,
+              icon: Icons.share,
+              label: 'Emergency Sharing',
+              onPressed: () {
+                // Handle emergency sharing
+              },
+            ),
+            const SizedBox(height: 10),
+            _buildEmergencyButton(
+              context,
+              icon: Icons.phone,
+              label: 'Call 199',
+              onPressed: () {
+                // Handle emergency call
+              },
+            ),
+            const SizedBox(height: 30),
+            const Text(
+              'Be prepared',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
-              const SizedBox(height: 10),
-              _buildEmergencyButton(
-                context,
-                icon: Icons.phone,
-                label: 'Call 199',
-                onPressed: () {
-                  // Handle emergency call
-                },
-              ),
-              const SizedBox(height: 30),
-              const Text(
-                'Be prepared',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 20),
-              _buildCheckboxTile(
-                label: 'Safety Check',
-                value: true,
-                onChanged: (bool? value) {
-                  // Handle checkbox change
-                },
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(height: 20),
+            _buildCheckboxTile(
+              label: 'Safety Check',
+              value: true,
+              onChanged: (bool? value) {
+                // Handle checkbox change
+              },
+            ),
+          ],
         ),
-      
-      
+      ),
     );
   }
 
