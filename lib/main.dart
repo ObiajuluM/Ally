@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:ally/pages/home/home.dart';
 import 'package:ally/pages/primary/primary.dart';
 import 'package:ally/themes/dark.dart';
 import 'package:ally/themes/light.dart';

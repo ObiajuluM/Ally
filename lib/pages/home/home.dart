@@ -4,6 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 //TODO: i may have to move the eemergency sharing and call 199 buttons down so they are easily accessed on one tap, ask AI
+
+//  add ally ai button somewhere
+// IconButton(
+//             onPressed: () {
+//               print("ally ai");
+//             },
+//             icon: Icon(
+//               Icons.shield,
+//               color: Colors.green,
+//             ),
+//           ),
+
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
@@ -13,7 +25,21 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Home'),
         centerTitle: true,
+        actions: [
+          ///
+
+          IconButton(
+            onPressed: () {
+              print("notifications");
+            },
+            icon: Icon(
+              Icons.notifications_none_rounded,
+            ),
+          ),
+        ],
       ),
+
+      ///
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
