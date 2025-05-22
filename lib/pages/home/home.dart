@@ -1,3 +1,4 @@
+import 'package:ally/pages/actions/actions.dart';
 import 'package:flutter/material.dart';
 
 //TODO: i may have to move the eemergency sharing and call 199 buttons down so they are easily accessed on one tap, ask AI
@@ -30,6 +31,12 @@ class HomePage extends StatelessWidget {
               label: 'Emergency Sharing',
               onPressed: () {
                 // Handle emergency sharing
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ActionsPage(),
+                  ),
+                );
               },
             ),
             const SizedBox(height: 10),
