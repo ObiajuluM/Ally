@@ -18,7 +18,7 @@ ThemeData darkTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.black,
     elevation: 0,
-    surfaceTintColor: Colors.white,
+    surfaceTintColor: Colors.green,
   ),
 
   /// for the animation when switching to and from pages

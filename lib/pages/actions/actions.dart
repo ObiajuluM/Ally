@@ -6,10 +6,6 @@ class ActionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Actions'),
-        centerTitle: true,
-      ),
       body: Container(
         color: Colors.pink,
       ),

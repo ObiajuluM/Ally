@@ -22,23 +22,6 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        centerTitle: true,
-        actions: [
-          ///
-
-          IconButton(
-            onPressed: () {
-              print("notifications");
-            },
-            icon: Icon(
-              Icons.notifications_none_rounded,
-            ),
-          ),
-        ],
-      ),
-
       ///
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -90,14 +73,14 @@ class HomePage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // for (int i = 0; i < 10; i++)
-            _buildCheckboxTile(
-              label: 'Safety Check',
-              value: true,
-              onChanged: (bool? value) {
-                // Handle checkbox change
-              },
-            ),
+            for (int i = 0; i < 10; i++)
+              _buildCheckboxTile(
+                label: 'Safety Check',
+                value: true,
+                onChanged: (bool? value) {
+                  // Handle checkbox change
+                },
+              ),
           ],
         ),
       ),

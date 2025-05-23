@@ -1,4 +1,5 @@
 import 'package:ally/pages/actions/actions.dart';
+
 import 'package:ally/pages/home/home.dart';
 import 'package:ally/pages/me/me.dart';
 import 'package:ally/pages/primary/providers/provider.dart';
@@ -27,6 +28,27 @@ class _PrimaryPageState extends ConsumerState<PrimaryPage> {
     final currentPage = ref.watch(primaryPageIndexProvider);
 
     return Scaffold(
+      appBar: AppBar(
+        title: currentPage == 0
+            ? Text('Home')
+            : currentPage == 1
+                ? Text("Actions")
+                : Text("Me"),
+        centerTitle: true,
+
+        ///
+        actions: [
+          IconButton(
+            onPressed: () {
+              print("notifications");
+            },
+            icon: Icon(
+              Icons.notifications_none_rounded,
+            ),
+          ),
+        ],
+      ),
+
       ///
       body: PageView.builder(
         controller: primaryPageController,
@@ -44,7 +66,6 @@ class _PrimaryPageState extends ConsumerState<PrimaryPage> {
       ///
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentPage,
-        // type: BottomNavigationBarType.fixed,
         onTap: (index) {
           // jump to page
           ref.read(primaryPageIndexProvider.notifier).setIndex(index);
