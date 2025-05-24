@@ -1,4 +1,6 @@
 import 'package:ally/pages/actions/actions.dart';
+import 'package:ally/pages/home/components/big_red_button.dart';
+
 import 'package:ally/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,11 +18,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 //             ),
 //           ),
 
-class HomePage extends ConsumerWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _HomePageState();
+}
+
+class _HomePageState extends ConsumerState<HomePage> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       ///
       body: SingleChildScrollView(
@@ -33,7 +40,7 @@ class HomePage extends ConsumerWidget {
                 ref.read(themeModeProvider.notifier).changeTheme();
               },
               child: const Text(
-                'Get help fast',
+                'Quick Actions',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -66,21 +73,24 @@ class HomePage extends ConsumerWidget {
             ),
             const SizedBox(height: 30),
             const Text(
-              'Be prepared',
+              'The Big Red Button',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 20),
-            for (int i = 0; i < 10; i++)
-              _buildCheckboxTile(
-                label: 'Safety Check',
-                value: true,
-                onChanged: (bool? value) {
-                  // Handle checkbox change
-                },
+
+            ///
+            // for (int i = 0; i < 10; i++)
+            Container(
+              // color: Colors.yellow,
+              margin: EdgeInsets.symmetric(
+                horizontal: 12,
+                vertical: 40,
               ),
+              child: BigRedButton(),
+            ),
           ],
         ),
       ),
@@ -112,32 +122,6 @@ class HomePage extends ConsumerWidget {
           Text(
             label,
             style: const TextStyle(fontSize: 18),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCheckboxTile({
-    required String label,
-    required bool value,
-    required ValueChanged<bool?> onChanged,
-  }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Row(
-        children: [
-          Checkbox(
-            value: value,
-            onChanged: onChanged,
-          ),
-          Text(
-            label,
-            style: const TextStyle(fontSize: 16),
           ),
         ],
       ),
